@@ -10,26 +10,21 @@ from numpy import load
 from random import *
 
 
-def balance_data_set(dimension, X, y):
-    list_X = []
-    list_y = []
-    for i in range(0, len(y)):
-        list_X.append(X[i])
-        list_y.append(y[i])
-    balanced_X = np.zeros((dimension, len(X[0, :])))
-    balanced_y = []
-    for elemnt in range(0, dimension):
-        index = randint(0, len(y) - elemnt - 1)
-        balanced_X[elemnt] = list_X.pop(index)
-        balanced_y.append(list_y.pop(index))
-    return balanced_X, balanced_y
-
+def manage_data_set(dimension, X, y):
+    labels = [y[i] for i in range(0, dimension)]
+    images = np.zeros((dimension, 784))
+    for letter in range(0, dimension):
+        count = 0
+        for i in range(0, 28):
+            for j in range(0, 28):
+                images[letter][count] = X[letter][i][j]
+                count += 1
+    return images, labels
 
 def balance_data_set(X, y):
     data_set = np.hstack((X, y.reshape(len(y), 1)))
     np.random.shuffle(data_set)
     return data_set[:, :-1], data_set[:, -1]
-
 
 def numbers_test():
     dimensions = [1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 240000]
@@ -37,21 +32,21 @@ def numbers_test():
     train_accuracy = []
 
     print("Digits classifier")
-
-    # Extract Dataset
     '''
+    # Extract Dataset
+    print('Extrating Dataset')
     X_train, y_train = extract_training_samples('digits')
     X_test, y_test = extract_test_samples('digits')
-    '''
+
 
     # Reshape Dataset
-    '''
+    print('Rashaping Dataset ')
     images_train, labels_train = manage_data_set(240000, X_train, y_train)
     images_test, labels_test = manage_data_set(40000, X_test, y_test)
-    '''
+
 
     # Save the Dataset
-    '''
+    print('Saving Dataset')
     save("images_numbers_train.npy", images_train)
     save("labels_numbers_train.npy", labels_train)
     save("images_numbers_test.npy", images_test)
@@ -68,7 +63,7 @@ def numbers_test():
         # Balancing
         images_train, labels_train = images_train_init[0:dimension:], labels_train_init[0:dimension]
 
-        digits_clf = tree.DecisionTreeClassifier()
+        digits_clf =  tree.DecisionTreeClassifier()
         digits_clf.fit(images_train, labels_train)
 
         test_accuracy.append(
@@ -85,7 +80,6 @@ def numbers_test():
     plt.xlabel("Training-Set Dimension")
     plt.ylabel("Test Accuracy")
     plt.show()
-
 
 def letters_test():
     dimensions = [1024, 2048, 4096, 8192, 16384, 32768, 65536, 124800]
