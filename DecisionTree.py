@@ -108,7 +108,7 @@ def letters_test():
     save("labels_letters_test.npy", labels_test)
     '''
 
-    # Extract the reshape Dataset
+    # Extract the balanced Dataset
 
     images_train_init, labels_train_init = balance_data_set(load("images_letters_train.npy"),load("labels_letters_train.npy"))
 
