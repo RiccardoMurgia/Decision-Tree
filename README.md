@@ -1,4 +1,1 @@
-H1 T1tolo
-===
-H2
----
+# Riproduzione dei risultati
