@@ -13,7 +13,7 @@ def lettersTest():
     print("Letters classifier")
     '''saveDataSet('letters')'''
 
-    # Extract the reshape Dataset
+    
     images_train_init, labels_train_init = balanceDataSet(load("images_letters_train.npy"),
                                                           load("labels_letters_train.npy"))
 
@@ -22,11 +22,11 @@ def lettersTest():
 
         images_train, labels_train = images_train_init[0:dimension:], labels_train_init[0:dimension]
 
-        # training with numbers dataset
+         
         clf = tree.DecisionTreeClassifier()
         clf = clf.fit(images_train, labels_train)
 
-        # testing dataset
+        
         testAccuracy.append(
             accuracy_score(load("labels_letters_test.npy"), clf.predict(load("images_letters_test.npy"))))
         trainAccuracy.append(
