@@ -11,7 +11,7 @@ def lettersTest():
     trainAccuracy = []
 
     print("Letters classifier")
-    '''saveDataSet('letters')'''
+    saveDataSet('letters')
 
     
     images_train_init, labels_train_init = balanceDataSet(load("images_letters_train.npy"),
