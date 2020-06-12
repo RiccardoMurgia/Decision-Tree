@@ -18,8 +18,8 @@ L'elaborato si articola in due file:
      
    ```balanceDataSet(X, y)```
    
-   *X:
-   *y:
+   * X:
+   * y:
      
    ```saveDataSet(dataSetType)```
      
