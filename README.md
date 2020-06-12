@@ -9,6 +9,6 @@ Quindi al crescere dimensioni del training set si sono effettuati alcuni test mi
 
 L'elaborato si articola in due file:
 
- * elaborateDataset:In questo file vengono implementate le fonzioni che permettono la gestione del Data Set.
+ * elaborateDataset: In questo file vengono implementate le fonzioni che permettono la gestione del Data Set.
  * lettersTest: In questo file vengono implementati i test. 
 
