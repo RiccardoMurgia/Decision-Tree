@@ -1,4 +1,4 @@
-from processesDataSet import *
+from elaborateDataSet import *
 from sklearn import tree
 from sklearn.metrics import accuracy_score
 from matplotlib import pyplot as plt
@@ -11,9 +11,8 @@ def lettersTest():
     trainAccuracy = []
 
     print("Letters classifier")
-    saveDataSet('letters')
+    '''saveDataSet('letters')'''
 
-    
     images_train_init, labels_train_init = balanceDataSet(load("images_letters_train.npy"),
                                                           load("labels_letters_train.npy"))
 
@@ -22,11 +21,9 @@ def lettersTest():
 
         images_train, labels_train = images_train_init[0:dimension:], labels_train_init[0:dimension]
 
-         
         clf = tree.DecisionTreeClassifier()
         clf = clf.fit(images_train, labels_train)
 
-        
         testAccuracy.append(
             accuracy_score(load("labels_letters_test.npy"), clf.predict(load("images_letters_test.npy"))))
         trainAccuracy.append(
