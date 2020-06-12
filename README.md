@@ -12,17 +12,15 @@ L'elaborato si articola in due file:
  * **elaborateDataset:** In questo file vengono implementate le fonzioni che permettono la gestione del Data Set.
  
    ```manageDataSet(dimension, X, y)```
-   * dimension:
-   * X: 
-   * y:
+   
+   * dimension: numero di samples contenuti.
+   * X: matrice delle immagini. 
+   * y: vettore delle labels.
      
    ```balanceDataSet(X, y)```
    
-   * X:
-   * y:
-     
-   ```saveDataSet(dataSetType)```
-     
-     
+   * X: matrice delle immagini. 
+   * y: vettore delle labels.
+        
  * **lettersTest:** In questo file vengono implementati i test. 
 
