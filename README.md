@@ -11,6 +11,6 @@ L'elaborato si articola in due file:
 
 
 <ul>
-  <il>- elaborateDataset:In questo file vengono implementate le fonzioni che permettono la gestione del Data Set.</il>
-  <il>- lettersTest: In questo file vengono implementati i test.  </il>
+  <il># elaborateDataset:In questo file vengono implementate le fonzioni che permettono la gestione del Data Set.</il>
+  <il># lettersTest: In questo file vengono implementati i test.  </il>
 </ul>
