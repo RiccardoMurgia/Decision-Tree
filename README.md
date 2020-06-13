@@ -24,4 +24,7 @@ L'elaborato si articola in due file:
    * y: vettore delle labels.
         
  * **lettersTest:** In questo file vengono implementati i test. 
-
+ 
+ # Riproduzione dei risultati
+ 
+Per riprodurre i risultati è necessario eseguire il file lettersTest.py, la prima esecuzione porterà al salvataggio  di alcuni file esterni di estensione .npy e di considerevoli dimensioni contenenti le varie suddivisioni del Data Set. 
