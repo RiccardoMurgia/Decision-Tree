@@ -9,7 +9,7 @@ Quindi al crescere delle dimensioni del training set si sono effettuati alcuni t
 
 L'elaborato si articola in due file:
 
- * **elaborateDataset:** In questo file vengono implementate le fonzioni che permettono la gestione del Data Set.
+ * **elaborateDataset:** In questo file vengono implementate le funzioni che permettono la gestione del Data Set.
   In seguito vengono riportate le signatures delle funzioni specificandone i parametri richiesti.
  
    ```manageDataSet(dimension, X, y)```
